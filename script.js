@@ -13,7 +13,7 @@ function setup() {
 
     for (let w = 0; w < x; w++) {
         for (let h = 0; h < y; h++) {
-            pixel.push(get(w,h));
+            pixel.push(get(w,h)); // Get and store the color of each pixel
         }
     }
     // console.log(pixel);
@@ -25,8 +25,8 @@ function setup() {
     let index = 0;
     for (let w = 0; w < x; w++) {
         for (let h = 0; h < y; h++) {
-            stroke(pixel[index][0],255,255);    
-            point(w, h);
+            stroke(pixel[index]);    
+            point(w, h); //Draw a point at position (w, h) with the current color
             index++;
         }
     }
